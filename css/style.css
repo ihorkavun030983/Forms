@@ -1,0 +1,271 @@
+* , *::before, *::after {
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    margin: 0 auto;
+	overflow: hidden;
+}
+.wrapper{
+	position: relative;
+	margin: 0 auto;
+	width: 1240px;
+	min-height: 100vh;
+	background-image: url(../images/forms.webp);
+    background-position: center;
+	background-size: cover;
+}
+
+.wrapper::before {
+	content: '';
+	background-color:rgba(0,0,0,.5);
+    height:100%;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+.box{
+	display: inline-block;
+	width: 500px;
+	height: 100vh;
+	margin-left: 740px;
+	background: rgba(233, 233, 233, 0.25);
+	backdrop-filter: blur(5px);
+}
+.container{
+	margin: 0 auto;
+	width: 340px;
+	margin-top: 60px;
+	font-size: 12px;
+}
+
+.switch input{
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.switch label{
+	display: inline-block;
+	position: relative;
+	width: 340px;
+	height: 36px;
+	border: 1px solid #153416;
+	border-radius: 100px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.switch label::before{
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: 50%;
+	height: 30px;
+	cursor: pointer;
+	border-radius: 50px;
+	background-color: #153416;
+	transition: .5s linear;
+}
+.switch input:checked + label::before {
+	left: calc(50% - 2px);
+}
+.form_auth_style input::placeholder{
+	color: #fff;
+	padding-left: 20px;
+	font-size: 12px;
+}
+.labels {
+	display: flex;
+    justify-content: space-around;
+    padding: 10px;
+	position: relative;
+	z-index: 1;
+}
+.forms h1{
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 400;
+	margin-bottom: 29px;
+}
+.switch {
+	margin-bottom: 60px;
+}
+/* Form */
+
+.form_auth_style label{
+    display: block;
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 15px;
+    
+}
+.form_auth_style input{
+	display: block;
+	width: 100%;
+	height: 44px;
+	border-radius: 50px;  
+	border:none;
+	outline: none;
+	background: #929191;
+	padding: 10px;
+}
+.form_auth_style input:focus{
+	border: 2px solid #436fea;
+}
+.forms .form_button:hover {
+	border: 2px solid #436fea;
+}
+
+.forms .form_button{
+    display: block;
+    width: 100%;
+    height: 44px;
+	border-radius: 50px;
+    border: none;
+    cursor: pointer;
+	color: #fff;
+	background-color: #153416;
+}
+
+.form_auth_style{
+	margin-bottom: 30px;
+}
+
+.seidme {
+	margin-bottom: 30px;
+	display: block;
+	
+	color: #fff;
+	width: 100%;
+	position: relative;
+}
+.seidme a{
+	color: #153416;
+    float: right;
+	padding-top: 5px;
+}
+
+.seidme input{
+	position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.seidme label{
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 5px 5px 5px 30px;
+	cursor: pointer;
+	
+}
+.seidme label::before{
+	content: '';
+	top: 3px;
+	left: 0;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border: 2px solid #fff;
+	border-radius: 2px;
+	transition: .2s ease;
+}
+.seidme input:checked + label::after{
+    content: '';
+    top: 2px;
+    left: 5px;
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(40deg);
+}
+.forms{
+	margin-bottom: 40px;
+}
+
+.links{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.links a{
+	color: #153416;
+	padding: 8px;
+}
+.links a:first-child{
+	text-decoration: none;
+}
+.links a:last-child{
+	color: #fff;
+}
+.social{
+	color: #153416;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.hidden{
+	width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.web a svg{
+	width: 50px;
+	height: 50px;
+}
