@@ -49,14 +49,13 @@ html, body{
 }
 
 
-body{
+body {
     margin: 0 auto;
 	overflow: hidden;
+	
 }
 .wrapper{
 	position: relative;
-	margin: 0 auto;
-	width: 1240px;
 	min-height: 100vh;
 	background-image: url(../images/forms.webp);
     background-position: center;
@@ -74,12 +73,13 @@ body{
 }
 
 .box{
-	display: inline-block;
+	display: block;
+	float: right;
 	width: 500px;
 	height: 100vh;
-	margin-left: 740px;
 	background: rgba(233, 233, 233, 0.25);
 	backdrop-filter: blur(5px);
+	overflow-x: auto;
 }
 .container{
 	margin: 0 auto;
@@ -88,6 +88,7 @@ body{
 	font-size: 12px;
 }
 
+/* switch */
 .switch input{
 	position: absolute;
 	z-index: -1;
@@ -163,7 +164,7 @@ body{
 	padding: 10px;
 }
 .form_auth_style input:focus{
-	border: 2px solid #436fea;
+	outline: 2px solid #436fea;
 }
 .forms .form_button:hover {
 	border: 2px solid #436fea;
@@ -187,7 +188,6 @@ body{
 .seidme {
 	margin-bottom: 30px;
 	display: block;
-	
 	color: #fff;
 	width: 100%;
 	position: relative;
@@ -218,7 +218,7 @@ body{
 	position: absolute;
 	width: 15px;
 	height: 15px;
-	border: 2px solid #fff;
+	border: 1px solid #fff;
 	border-radius: 2px;
 	transition: .2s ease;
 }
@@ -232,7 +232,17 @@ body{
     border-bottom: 3px solid #fff;
     border-right: 3px solid #fff;
     transform: rotate(40deg);
+	
 }
+.seidme input:checked + label::before{
+    content: '';
+	position: absolute;
+    left: 0;
+	bottom: 0;
+	background-color: #153416;
+	border: none;
+}
+
 .forms{
 	margin-bottom: 40px;
 }
@@ -266,6 +276,10 @@ body{
 }
 
 .web a svg{
-	width: 50px;
-	height: 50px;
+width: 24px;
+height: 24px;
+fill: #153416;
+}
+.web{
+	margin: 20px;
 }
